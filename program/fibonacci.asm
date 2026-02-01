@@ -45,7 +45,7 @@ convert_loop:
     add eax, ebx
 
     inc esi
-    jmp convert_loop ; SỬA: Phải nhảy về đầu lặp, không phải done
+    jmp convert_loop
 
 done_convert:
     pop ecx
@@ -122,7 +122,7 @@ main proc
     lea ecx, [ebp - 332] ; Buffer input
     push 0
     lea eax, [ebp - 336] ; Biến chứa số byte đã đọc
-    push eax             ; SỬA: Tách lệnh push eax, [mem] thành lea + push
+    push eax            
     push 30
     push ecx
     push edi
